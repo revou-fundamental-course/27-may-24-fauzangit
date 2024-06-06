@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+    <title>Fauzan's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css"
+</head>
+
+<body>
+    <nav>
+        <div class="logo-icon" style="background-image: url(assets/logo.png);"></div>
+
+        <section>
+            <a class="nav-item" href="#home">Home</a>
+            <a class="nav-item" href="#facilities">Our Facilities</a>
+            <a class="nav-item" href="#message-us">Message Us</a>
+        </section>
+    </nav>
+
+    <hr>
+
+    <section class="section-container">
+        <!-- Home -->
+        <section id="home">
+            <header>
+                <h1>Hi Fauzan, Welcome to website</h1>
+            </header>
+
+            <article>
+                <p>Lorem Ipsum Dolor Sit Amet...</p>
+
+                <div class="banner-container">
+                    <div class="banner-img" style="background-image: url(assets/1.jpg);"></div>
+                    <div class="banner-img" style="background-image: url(assets/2.jpg);"></div>
+                    <div class="banner-img" style="background-image: url(assets/3.jpg);"></div>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Our Facilities -->
+        <section id="facilities">
+            <header>
+                <h1>Our Facilities</h1>
+            </header>
+
+            <article class="facility-list">
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Free Trial</h5>
+                </div>
+
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Location</h5>
+                </div>
+
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Class</h5>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Message US -->
+        <section id="message-us">
+            <header>
+                <h1>Message Us</h1>
+            </header>
+
+            <section class="message-us-section">
+                <!-- Form -->
+                <section>
+                    <table> 
+                        <form name="contus" onsubmit="return validateForm()"> 
+                            <tr> 
+                                <td> 
+                                    <label for="nama" id="nama">Nama Lengkap</label> 
+                                </td> 
+                                <td>:</td>
+                                <td>
+                                    <input required type="text" name="nama" placeholder="Tulis namamu disini"/> 
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td>
+                                    <label for="nohp" id="nohp">No.Handphone</label> 
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="telnum" id="nohp" name="nohp" placeholder="Format: 62821xxx"/> 
+                                </td> 
+                            </tr>
+                            <tr> 
+                                <td>
+                                    <label for="email" id="email">Email Aktif</label> 
+                                </td>
+                                <td>:</td>
+                                <td>
+                                    <input required type="email" name="email" placeholder="nama@email.com" /> 
+                                </td> 
+                            </tr> 
+                            <tr> 
+                                <td style="display: flex; flex-direction: row; align-items: start;">
+                                    <label for="pilihankursus" id="pilihankursus">Paket yang diminati</label> 
+                                </td>
+                                <td style="vertical-align: top;">:</td>
+                                <td>
+                                    <input required type="radio" id="reguler" name="pilihkursus" value="Reguler" />
+                                    <label for="reguler">Reguler</label><br>
+                                    <input required type="radio" id="cruiseship" name="pilihkursus" value="Premium"/>
+                                    <label for="cruiseship">Premium</label><br>                                
+                                </td> 
+                            </tr>
+                            <tr> 
+                                <td style="display: flex; flex-direction: row; align-items: start;">
+                                    <label for="pesan" id="pesan">Pesan</label> 
+                                </td>
+                                <td style="vertical-align: top;">:</td>
+                                <td>
+                                    <textarea required rows="4" name="pesan" placeholder="Tulis pesanmu disini"></textarea>
+                                </td> 
+                            </tr> 
+                            <tr>
+                                <td colspan="3">
+                                    <button type="submit" class="tombol-form" id="kirimform">Submit</button>
+                                </td>
+                            </tr>
+                        </form> 
+                    </table>
+                </section>
+
+                <!-- Result -->
+                <section class="result-container">
+                    <div class="tampilkan-result" id="show-result">
+                        <p><b><span id="sukses-submit" class="alert-sukses"></span></b></p>
+                        <p>Nama : <span id="sender-nama"></span></p>
+                        <p>No.HP : <span id="sender-nohp"></span></p>
+                        <p>Email : <span id="sender-email"></span></p>
+                        <p>Paket yang diminati : <span id="sender-pilihkursus"></span></p>
+                        <p>Pesan/Pertanyaan : <span id="sender-pesan"></span></p>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
